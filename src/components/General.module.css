@@ -1,0 +1,75 @@
+.TitleSection{
+    color: rgb(255, 255, 255);
+    font-size: 150px;
+    /* position: absolute; */
+    margin: 0;
+}
+.ButtonGeneric{
+    font-weight: 900;
+    font-weight: bolder;
+    color: white;
+    background-color: rgba(195, 43, 226, 0.927);
+    border: none;
+    border-radius: 25px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.socialMidiaListContainer{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socialMidiaIcon{
+    transition: all 0.8s ease;
+}
+
+.socialMidiaIcon:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 12px rgb(255, 255, 255));
+}
+
+.arrowCircleIcon{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 40px; /* Fixa o menu no topo */
+    right: 3vw;
+    z-index: 10; 
+    cursor: pointer;
+    /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5) ; */
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+
+.themeToggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 3px;
+    border-radius: 20px;
+    flex-direction: row-reverse;
+    position: fixed;
+    right: 50px;
+    z-index: 10; 
+    cursor: pointer;
+    gap: 10px;
+    background-color: rgba(41, 41, 41, 1);
+}
+
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.themeToggleIcon{
+    width: 10px;
+    height: 10px;
+   
+    /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5) ; */
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}

@@ -1,0 +1,41 @@
+.stackContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 280px;
+    height: 550px;
+    border-radius: 25px;
+    padding: 15px 25px;
+
+    background-color: rgb(10, 10, 10);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.stackContainer:hover{
+   background-color: rgb(0, 0, 0);
+   box-shadow: 10px 10px 200px rgba(175, 175, 175, 0.30);
+    transform: translateY(-5px); /* Começa com translateY -20px para aplicar o efeito de deslizamento */
+    animation: fadeIn 1s ease-in-out forwards; /* Aplica a animação de fadeIn */
+}
+
+
+.skillsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 150px;
+}
+
+.stackContainer p{
+    font-size: 21px;
+    
+}
+
+
+
+.subDescription, h2, li{
+    color: white;
+}

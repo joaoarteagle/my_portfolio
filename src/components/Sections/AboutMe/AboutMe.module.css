@@ -1,0 +1,31 @@
+.myPhoto{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.aboutMeText{
+  text-align: left;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  line-height: 45px;
+  
+}
+
+.aboutMeTextContainer{
+  display: flex;
+  align-items: first baseline;
+  padding: 20px;
+  justify-content: center;
+  flex-direction: column;
+  max-width:50vw;
+}
+
+.containerRow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 50px;
+}

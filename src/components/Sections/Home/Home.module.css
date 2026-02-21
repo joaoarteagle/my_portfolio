@@ -1,0 +1,97 @@
+.home_title_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: fit-content;
+    padding: 20px 0px;
+}
+
+.home_container_items{
+    display: flex;
+  
+}
+
+.home_coffee_image{
+    width: fit-content;
+    height: fit-content;
+    margin: 12px 0px 0px 12px;
+}
+
+
+h1{
+    margin: 0px;
+    font-size: 60px;
+    font-weight: lighter;
+    cursor: pointer; 
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.30) -80%, transparent 100%);
+    }
+
+    10% {
+      transform: translate(-50%, -50%) scale(1.005);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.31) -80%, transparent 100%);
+    }
+
+    25% {
+      transform: translate(-50%, -50%) scale(1.015);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.33) -80%, transparent 100%);
+    }
+
+    40% {
+      transform: translate(-50%, -50%) scale(1.025);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.36) -80%, transparent 100%);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) scale(1.03);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.4) -80%, transparent 100%);
+    }
+
+    60% {
+      transform: translate(-50%, -50%) scale(1.025);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.36) -80%, transparent 100%);
+    }
+
+    75% {
+      transform: translate(-50%, -50%) scale(1.015);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.33) -80%, transparent 100%);
+    }
+
+    90% {
+      transform: translate(-50%, -50%) scale(1.005);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.31) -80%, transparent 100%);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.30) -80%, transparent 100%);
+    }
+  }
+
+  h1::before{
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: min(80vw, 1300px);
+    height: min(12vw, 150px);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.30) -80%, transparent 100%);
+    filter: blur(50px);
+    z-index: 0;
+    animation: glowPulse 5s ease-in-out infinite;
+  }
+  
+  p{
+    padding: 0px;
+    margin: 0px 0px;
+    font-size: 40px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: end;
+  }
+ 
