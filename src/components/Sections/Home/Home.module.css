@@ -26,7 +26,7 @@ h1{
     cursor: pointer; 
   }
   
-  @keyframes glowPulse {
+  /* @keyframes glowPulse {
     0% {
       transform: translate(-50%, -50%) scale(1);
       background: radial-gradient(circle, rgba(255, 255, 255, 0.30) -80%, transparent 100%);
@@ -85,7 +85,7 @@ h1{
     z-index: 0;
     animation: glowPulse 5s ease-in-out infinite;
   }
-  
+   */
   p{
     padding: 0px;
     margin: 0px 0px;
@@ -95,3 +95,26 @@ h1{
     justify-content: end;
   }
  
+  @media (max-width: 768px) {
+    .home_title_container{
+        align-items: center;
+    }
+
+    .home_container_items{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home_coffee_image{
+      display: none;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    p{
+        font-size: 24px;
+        justify-content: center;
+    }
+  }

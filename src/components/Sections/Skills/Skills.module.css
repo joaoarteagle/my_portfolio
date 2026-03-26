@@ -25,9 +25,9 @@
 .skillsContainer{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
-    gap: 150px;
+    gap: 10px;
 }
 
 .stackContainer p{

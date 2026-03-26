@@ -30,3 +30,25 @@
   flex-direction: row-reverse;
   gap: 50px;
 }
+
+@media (max-width: 768px) {
+  .myPhoto{
+   display: none;
+  }
+
+  .aboutMeText{
+    font-size: 1.5rem;
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .aboutMeTextContainer{
+    max-width:100%;
+    padding: 10px;
+  }
+
+  .containerRow{
+    flex-direction: column;
+    gap: 20px;
+   }
+}

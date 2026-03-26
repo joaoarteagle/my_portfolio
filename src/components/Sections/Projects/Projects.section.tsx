@@ -31,7 +31,7 @@ export default function ProjectList({id}: {id: string}) {
         {
             nameProject: t.projects.project3.name,
             description: t.projects.project3.description,
-            urlRepository: "https://github.com/NomaSolutions",
+            urlRepository: "",
             img: "aquiProject.png"
         }
     ];
@@ -53,11 +53,6 @@ export default function ProjectList({id}: {id: string}) {
                             right={project.right}/>
                     </ScrollReveal>
                 ))}
-                {/* {
-                    projectList?.length >= 3 && (
-                        <button style={{textAlign: "center", fontSize: "1.2rem", marginTop: "20px"}}>see more...</button>
-                    )
-                } */}
 
             </div>
         </section>

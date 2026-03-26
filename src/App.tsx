@@ -1,5 +1,6 @@
 import "./App.css";
 import ArrowDownIcon from "./components/ArrowDown";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 import AboutMe from "./components/Sections/AboutMe/AboutMe.section";
 import ContactSection from "./components/Sections/Contact/Contact.section";
 import HeaderSection from "./components/Sections/Header/HeaderSection";
@@ -14,6 +15,7 @@ function App() {
       <ArrowDownIcon />
       <div className="containerSections">
         <HeaderSection />
+        <LanguageSwitcher />
         <Home id="homeSection" />
         <AboutMe id="aboutMeSection" />
         <SkillsSection id="skillsSection" />

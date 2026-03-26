@@ -1,8 +1,10 @@
 .languageSwitcher {
   display: flex;
-  position: absolute;
+  position: fixed;
+  z-index: 9999;
   left: 20px;
   top: 5px;
+   overflow: hidden;
   align-items: center;
   margin-left: 0;
 }

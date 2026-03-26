@@ -1,7 +1,6 @@
 import styles from './header.module.css'
 import { useState, useEffect } from "react";
 import OptionsHeader from './OptionsHeader';
-import LanguageSwitcher from '../../LanguageSwitcher';
 import { useTranslation } from '../../../hooks/useTranslation';
 
 function HeaderSection(){
@@ -28,7 +27,6 @@ function HeaderSection(){
         <OptionsHeader section={t.nav.home} link={"homeSection"}/>
         <OptionsHeader section={t.nav.projects} link={"projectsSection"}/>
         <OptionsHeader section={t.nav.contact} link={"contactSection"}/>
-        <LanguageSwitcher />
     </nav>
 )};
 
