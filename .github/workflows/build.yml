@@ -29,9 +29,9 @@ jobs:
 
       - name: Build web-app
         env:
-          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY || vars.VITE_EMAILJS_PUBLIC_KEY }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID || vars.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID || vars.VITE_EMAILJS_TEMPLATE_ID }}
         run: |
           [ -n "$VITE_EMAILJS_PUBLIC_KEY" ] || (echo "Missing VITE_EMAILJS_PUBLIC_KEY" && exit 1)
           [ -n "$VITE_EMAILJS_SERVICE_ID" ] || (echo "Missing VITE_EMAILJS_SERVICE_ID" && exit 1)
