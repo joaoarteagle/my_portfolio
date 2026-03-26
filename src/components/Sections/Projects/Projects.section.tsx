@@ -1,31 +1,64 @@
 import style from './Projects.module.css'
 import ProjectsCard from "./Projects";
+import ScrollReveal from "../../ScrollReveal";
+import { useTranslation } from '../../../hooks/useTranslation';
+
+interface ProjectProps {
+    nameProject: string;
+    urlRepository: string;
+    img: string;
+    description: string;
+    right?: boolean;
+}
 
 export default function ProjectList({id}: {id: string}) {
+    const t = useTranslation();
+    
+    const projectList: ProjectProps[] = [
+        {
+            nameProject: t.projects.project1.name,
+            description: t.projects.project1.description,
+            urlRepository: "https://joaoarteagle.github.io/esoft5s-bw-a/",
+            img: "squirtleProjectPage.png"
+        },
+        {
+            nameProject: t.projects.project2.name,
+            description: t.projects.project2.description,
+            urlRepository: "https://github.com/joaoarteagle/Spring-Boot-REST-API",
+            img: "SpringBootProject.png",
+            right: true
+        },
+        {
+            nameProject: t.projects.project3.name,
+            description: t.projects.project3.description,
+            urlRepository: "https://github.com/NomaSolutions",
+            img: "aquiProject.png"
+        }
+    ];
+
     return(
         <section id={id}>
-
+            <ScrollReveal direction="up" delay={0.1} duration={0.8}>
+                <h1>{t.nav.projects}</h1>
+            </ScrollReveal>
             <div className={style.ProjectsList}>
-            <ProjectsCard 
-                nameProject={"Projeto Squirtle"} 
-                description={"Um Projeto de uma Landing Page sobre um Pokemon chamado squitle   Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ea sit laudantium est quos similique quia? Similique voluptatibus labore itaque, nulla, ipsa, cupiditate sapiente consectetur vero quaerat voluptatum nihil voluptates!"} 
-                urlRepository={"https://joaoarteagle.github.io/esoft5s-bw-a/"} 
-                img={"squirtleProjectPage.png"}/>
 
-            <ProjectsCard 
-                nameProject={"Projeto Java SpringBoot"} 
-                description={"Desenvolvido com Java SpringBoot, CRUD completo de listagem de contatos com validador de dados Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ea sit laudantium est quos similique quia? Similique voluptatibus labore itaque, nulla, ipsa, cupiditate sapiente consectetur vero quaerat voluptatum nihil voluptates!"} 
-                urlRepository={"https://github.com/joaoarteagle/Spring-Boot-REST-API"} 
-                img={"SpringBootProject.png"} 
-                right={true} />
-            
-            <ProjectsCard 
-                nameProject={"AQUI📍"} 
-                description={"Um Projeto de uma Landing Page sobre um Pokemon chamado squitle   Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ea sit laudantium est quos similique quia? Similique voluptatibus labore itaque, nulla, ipsa, cupiditate sapiente consectetur vero quaerat voluptatum nihil voluptates!"} 
-                urlRepository={"https://joaoarteagle.github.io/esoft5s-bw-a/"} 
-                img={"aquiProject.png"}/>
+                {projectList?.map((project, index) => (
+                    <ScrollReveal key={index} direction="up" delay={0.2 + (index * 0.2)} duration={0.8}>
+                        <ProjectsCard 
+                            nameProject={project.nameProject}
+                            urlRepository={project.urlRepository}
+                            img={project.img}
+                            description={project.description}
+                            right={project.right}/>
+                    </ScrollReveal>
+                ))}
+                {/* {
+                    projectList?.length >= 3 && (
+                        <button style={{textAlign: "center", fontSize: "1.2rem", marginTop: "20px"}}>see more...</button>
+                    )
+                } */}
 
-            
             </div>
         </section>
     )

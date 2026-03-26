@@ -16,7 +16,8 @@
 .stackContainer:hover{
    background-color: rgb(0, 0, 0);
    box-shadow: 10px 10px 200px rgba(175, 175, 175, 0.30);
-    transform: translateY(-5px); /* Começa com translateY -20px para aplicar o efeito de deslizamento */
+   cursor: pointer;
+   transform: translateY(-5px); /* Começa com translateY -20px para aplicar o efeito de deslizamento */
     animation: fadeIn 1s ease-in-out forwards; /* Aplica a animação de fadeIn */
 }
 

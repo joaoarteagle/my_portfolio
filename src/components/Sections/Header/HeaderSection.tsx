@@ -1,45 +1,35 @@
-
 import styles from './header.module.css'
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import OptionsHeader from './OptionsHeader';
-import ThemeChanger from '../../themeChanger';
-
+import LanguageSwitcher from '../../LanguageSwitcher';
+import { useTranslation } from '../../../hooks/useTranslation';
 
 function HeaderSection(){
     const [isSticky, setIsSticky] = useState(false);
+    const t = useTranslation();
 
     useEffect(() => {
       const handleScroll = () => {
-        const scrollY = window.scrollY; // Posição do scroll vertical
-        setIsSticky(scrollY > 0); // Ativa o sticky ao rolar mais de 50px
+        const scrollY = window.scrollY;
+        setIsSticky(scrollY > 0);
       };
   
       window.addEventListener('scroll', handleScroll);
   
-      // Cleanup: Remove o evento ao desmontar o componente
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
-  
-  
 
    return(
     <nav className={`${styles.sticky} ${isSticky ? styles.stickyActive : ''}`}>
-
-        {/* {options.map((section, link, key)=>(
-          <OptionsHeader key={key} section={section} link={link}/>
-        ))} */}
-        <OptionsHeader section={"Skills"} link={"skillsSection"}/>
-        <OptionsHeader section={"About Me"} link={"aboutMeSection"}/>
-        <OptionsHeader section={"Home"} link={"homeSection"}/>
-        <OptionsHeader section={"Projects"} link={"projectsSection"}/>
-        <OptionsHeader section={"Contact"} link={"contactSection"}/>
-        <ThemeChanger/>
+        <OptionsHeader section={t.nav.skills} link={"skillsSection"}/>
+        <OptionsHeader section={t.nav.aboutMe} link={"aboutMeSection"}/>
+        <OptionsHeader section={t.nav.home} link={"homeSection"}/>
+        <OptionsHeader section={t.nav.projects} link={"projectsSection"}/>
+        <OptionsHeader section={t.nav.contact} link={"contactSection"}/>
+        <LanguageSwitcher />
     </nav>
 )};
 
-
 export default HeaderSection;
-
-

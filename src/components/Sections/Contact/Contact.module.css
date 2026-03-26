@@ -1,0 +1,213 @@
+.contactSection {
+    width: 100%;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.contactContainer {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.contactTitle {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    text-align: center;
+}
+
+.contactDescription {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input {
+    padding: 14px 18px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.input:hover:not(:focus) {
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.submitButton {
+    padding: 16px 32px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    margin-top: 16px;
+}
+
+.submitButton:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.submitButton:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.successMessage {
+    padding: 14px 18px;
+    border-radius: 12px;
+    background-color: rgba(76, 175, 80, 0.2);
+    border: 1.5px solid rgba(76, 175, 80, 0.5);
+    color: #4caf50;
+    text-align: center;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+.errorMessage {
+    padding: 14px 18px;
+    border-radius: 12px;
+    background-color: rgba(244, 67, 54, 0.2);
+    border: 1.5px solid rgba(244, 67, 54, 0.5);
+    color: #f44336;
+    text-align: center;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contactInfo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contactInfo p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 16px 0;
+    font-size: 1rem;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.socialLinks a {
+    padding: 10px 20px;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .contactSection {
+        padding: 60px 16px;
+    }
+
+    .contactTitle {
+        font-size: 2.5rem;
+    }
+
+    .contactDescription {
+        font-size: 1rem;
+    }
+
+    .contactForm {
+        gap: 18px;
+    }
+
+    .input {
+        padding: 12px 16px;
+        font-size: 16px; 
+    }
+
+    .submitButton {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+
+    .socialLinks {
+        gap: 12px;
+    }
+
+    .socialLinks a {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

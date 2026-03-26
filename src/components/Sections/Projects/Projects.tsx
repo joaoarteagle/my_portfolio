@@ -8,7 +8,9 @@ const ProjectsCard = ({nameProject, urlRepository, img, description, right}: {na
             <h3 className={styles.ProjectName}>{nameProject}</h3>
             <a href={urlRepository} target="_blank" rel="noopener noreferrer">
                 <div className={styles.ImageWrapper}>
-                    <img src={`src/assets/img/${img}`} alt='ProjectImage'/>
+              
+
+                    <img className={styles.ProjectImage} src={`src/assets/img/${img}`} alt='ProjectImage'/>
                 </div>
             </a>
             </div>

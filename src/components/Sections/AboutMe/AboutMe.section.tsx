@@ -1,33 +1,38 @@
 import styles from "./AboutMe.module.css";
+import ScrollReveal from "../../ScrollReveal";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export default function AboutMe({ id }: { id: string }) {
+  const t = useTranslation();
+  
   return (
     <section id={id}>
       <div className={styles.containerRow}>
-        <img
-          className={styles.myPhoto}
-          src={`src/assets/img/myphoto.jpeg`}
-          alt="minha foto"
-        />
+        <ScrollReveal direction="down" delay={0.2} duration={0.8}>
+          <img
+            className={styles.myPhoto}
+            src={`src/assets/img/myPhoto.png`}
+            alt="minha foto"
+          />
+        </ScrollReveal>
         <div className={styles.aboutMeTextContainer}>
-          <p className={`${styles.aboutMeText}`}>
-            {" "}
-            I’m a Software Engineering undergraduate and a postgraduate student in Systems Development with Java, 
-           focused on frontend development. 
-              
-          </p>
+          <ScrollReveal direction="right" delay={0.3} duration={0.8}>
+            <p className={`${styles.aboutMeText}`}>
+              {t.aboutMe.paragraph1}
+            </p>
+          </ScrollReveal>
           
-          <p className={styles.aboutMeText}>
-          I mainly work with React, TypeScript, and Tailwind CSS, building responsive, 
-           clean, and user-friendly interfaces.
-            
-          </p>
+          <ScrollReveal direction="left" delay={0.5} duration={0.8}>
+            <p className={styles.aboutMeText}>
+              {t.aboutMe.paragraph2}
+            </p>
+          </ScrollReveal>
 
-          <p className={styles.aboutMeText}>
-            I have experience in real-world projects as a freelancer and within development teams, always aiming for 
-           well-structured code and solutions that truly add value for users. I’m curious, collaborative, and constantly
-           evolving as a developer.
-          </p>
+          <ScrollReveal direction="right" delay={0.7} duration={0.8}>
+            <p className={styles.aboutMeText}>
+              {t.aboutMe.paragraph3}
+            </p>
+          </ScrollReveal>
         </div>
       </div>
     </section>

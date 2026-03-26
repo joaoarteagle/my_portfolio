@@ -1,12 +1,11 @@
 .TitleSection{
     color: rgb(255, 255, 255);
-    font-size: 150px;
-    /* position: absolute; */
+    font-size: clamp(2rem, 10vw, 150px);
     margin: 0;
 }
+
 .ButtonGeneric{
     font-weight: 900;
-    font-weight: bolder;
     color: white;
     background-color: rgba(195, 43, 226, 0.927);
     border: none;
@@ -14,6 +13,12 @@
     width: 150px;
     height: 40px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ButtonGeneric:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(195, 43, 226, 0.5);
 }
 
 .socialMidiaListContainer{
@@ -22,10 +27,12 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .socialMidiaIcon{
     transition: all 0.8s ease;
+    cursor: pointer;
 }
 
 .socialMidiaIcon:hover{
@@ -37,14 +44,17 @@
     width: 30px;
     height: 30px;
     position: fixed;
-    bottom: 40px; /* Fixa o menu no topo */
+    bottom: 40px;
     right: 3vw;
-    z-index: 10; 
+    z-index: 10;
     cursor: pointer;
-    /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5) ; */
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+    transition: all 0.3s ease;
 }
 
+.arrowCircleIcon:hover {
+    transform: scale(1.1);
+}
 
 .themeToggle{
     display: flex;
@@ -55,7 +65,7 @@
     flex-direction: row-reverse;
     position: fixed;
     right: 50px;
-    z-index: 10; 
+    z-index: 10;
     cursor: pointer;
     gap: 10px;
     background-color: rgba(41, 41, 41, 1);
@@ -66,10 +76,33 @@ span{
     align-items: center;
     justify-content: center;
 }
+
 .themeToggleIcon{
     width: 10px;
     height: 10px;
-   
-    /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5) ; */
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+    .TitleSection {
+        font-size: clamp(1.5rem, 8vw, 4rem);
+    }
+
+    .arrowCircleIcon {
+        width: 25px;
+        height: 25px;
+        right: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .socialMidiaListContainer {
+        gap: 15px;
+    }
+
+    .arrowCircleIcon {
+        width: 20px;
+        height: 20px;
+        bottom: 30px;
+    }
 }

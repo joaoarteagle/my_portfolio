@@ -1,57 +1,3 @@
-/*  
-
-.sticky{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    z-index: 9999;
-    overflow: hidden;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.827);
-   
-}
- .sticky + main{
-    padding-top: 60px;
- }
-
-.Option{
-    position: relative;
-    display: inline-block;
-    font-size: x-large;
-    color: aliceblue;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.Option::after{
-    content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 1px; 
-      width: 100%;
-      background-color:aliceblue; 
-      transform: scaleX(0); 
-      transform-origin: left; 
-      transition: transform 1.0s ease; 
-}
-
-.Option:hover::after{
-    transform: scaleX(1);
-}
-
-.OptionSelection::after{
-    transform: scaleX(1);
-}
-
-*/
-
 .sticky {
     display: flex;
     align-items: center;
@@ -68,7 +14,6 @@
     background-color: rgba(0, 0, 0, 0.827);
     padding: 0 1rem;
     box-sizing: border-box;
-    flex-wrap: wrap; /* Para evitar estouro em telas pequenas */
 }
 
 .sticky + main {
@@ -78,7 +23,7 @@
 .Option {
     position: relative;
     display: inline-block;
-    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsivo */
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: aliceblue;
     cursor: pointer;
     text-decoration: none;
@@ -106,9 +51,6 @@
     transform: scaleX(1);
 }
 
-/* ===== Responsividade ===== */
-
-/* Telas médias (tablets) */
 @media (max-width: 768px) {
     .sticky {
         gap: 30px;
@@ -120,7 +62,6 @@
     }
 }
 
-/* Telas pequenas (smartphones) */
 @media (max-width: 480px) {
     .sticky {
         gap: 15px;
