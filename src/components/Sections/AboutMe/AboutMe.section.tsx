@@ -11,7 +11,7 @@ export default function AboutMe({ id }: { id: string }) {
         <ScrollReveal direction="down" delay={0.2} duration={0.8}>
           <img
             className={styles.myPhoto}
-            src={`src/assets/img/myPhoto.png`}
+            src={`${import.meta.env.BASE_URL}img/myPhoto.png`}
             alt="minha foto"
           />
         </ScrollReveal>

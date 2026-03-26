@@ -32,7 +32,11 @@ jobs:
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
           VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-        run: npm run build 
+        run: |
+          [ -n "$VITE_EMAILJS_PUBLIC_KEY" ] || (echo "Missing VITE_EMAILJS_PUBLIC_KEY" && exit 1)
+          [ -n "$VITE_EMAILJS_SERVICE_ID" ] || (echo "Missing VITE_EMAILJS_SERVICE_ID" && exit 1)
+          [ -n "$VITE_EMAILJS_TEMPLATE_ID" ] || (echo "Missing VITE_EMAILJS_TEMPLATE_ID" && exit 1)
+          npm run build 
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
