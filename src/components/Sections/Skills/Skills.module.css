@@ -40,3 +40,15 @@
 .subDescription, h2, li{
     color: white;
 }
+
+@media (max-width: 768px) {
+    .skillsContainer{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stackContainer{
+        width: 90%;
+        height: auto;
+    }
+}
